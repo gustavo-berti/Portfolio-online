@@ -1,6 +1,22 @@
 .navbar{
     margin: 0;
+    padding: 1em;
     width: 100vw;
     height: 5em;
     background-color: #444444;
+    overflow: hidden;
+    text-align: center;
+}
+
+.navbar ul{
+    display: inline-flex;
+    list-style-type: none;
+}
+
+.navbar li{
+    margin-right: 5em;
+}
+
+.navbar li a:hover{
+    background-color: #242424;
 }

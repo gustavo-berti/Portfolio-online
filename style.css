@@ -1,16 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Poppins);
-
-*{
-    background-color: #242424;
-    color: aliceblue;
-    font-family: 'Poppins';
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .about{
-    margin-top: 1em;
+    margin-top: 2em;
     display: grid;
     grid-template-columns: 45vw 45vw;
     grid-gap: 5vw;
@@ -52,10 +41,12 @@
 .perfil{
     width: 300px;
     height: 300px;
+    border-radius: 50%;
 }
 
 .social{
     width: 75px;
     height: 75px;
     margin-right: 2em;
+    border-radius: 50%;
 }
