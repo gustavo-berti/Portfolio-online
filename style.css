@@ -1,3 +1,46 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+
+*{
+    color: aliceblue;
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{    
+    background-color: #242424;
+}
+
+.navbar{
+    margin: 0;
+    width: 100vw;
+    height: 5em;
+    background-color: #444444;
+    overflow: hidden;
+    text-align: center;
+}
+
+.navbar ul{
+    display: inline-flex;
+    list-style-type: none;
+}
+
+.navbar li{
+    margin-right: 5em;
+}
+
+.navbar li a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 2em 16px;
+}
+
+.navbar li a:hover{
+    background-color: #242424;
+}
+
 .about{
     margin-top: 2em;
     display: grid;
