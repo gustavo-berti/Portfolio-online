@@ -1,79 +1,93 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins);
 
-*{
+* {
     color: aliceblue;
     font-family: 'Poppins';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width: none;
 }
 
-body{    
+html {
+    scroll-padding-top: 6em;
+}
+
+body {
     background-color: #242424;
 }
 
-.navbar{
+section {
+    margin-bottom: 1em;
+}
+
+.navbar {
     margin: 0;
     width: 100vw;
     height: 5em;
     background-color: #444444;
     overflow: hidden;
     text-align: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
 }
 
-.navbar ul{
+.navbar ul {
     display: inline-flex;
     list-style-type: none;
 }
 
-.navbar li{
+.navbar li {
     margin-right: 5em;
 }
 
-.navbar li a{
+.navbar li a {
     display: block;
     text-decoration: none;
     text-align: center;
     padding: 2em 16px;
 }
 
-.navbar li a:hover{
+.navbar li a:hover {
     background-color: #242424;
 }
 
-.about{
+#about {
     margin-top: 2em;
     display: grid;
     grid-template-columns: 45vw 45vw;
     grid-gap: 5vw;
 }
 
-.title{
+.title {
     color: #f5f5f5;
 }
 
-.text{
+.text {
     margin: 10px;
     padding: 10px;
     width: 45vw;
 }
 
-.text p, ul{
+.text p,
+ul {
     margin-bottom: 2em;
 }
 
-.icon{
+.icon {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 10px;
     width: 40px;
 }
 
-.itens-text{
+.itens-text {
     margin-left: 20px;
 }
 
-.image{
+.image {
     margin-left: 2vw;
     width: 45vw;
     display: grid;
@@ -81,15 +95,48 @@ body{
     margin-left: 15vw;
 }
 
-.perfil{
+.perfil {
     width: 300px;
     height: 300px;
     border-radius: 50%;
+    margin-bottom: 20px;
 }
 
-.social{
+.social {
     width: 75px;
     height: 75px;
     margin-right: 2em;
     border-radius: 50%;
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.projects {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw;
+    gap: 20px;
+}
+
+.project {
+    text-align: center;
+    padding: 10px;
+    background-color: #444444;
+    border-radius: 15px;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.icons {
+    flex-direction: row;
 }
