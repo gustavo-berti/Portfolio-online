@@ -192,14 +192,14 @@ ul {
         justify-content: center;
     }
     .project{
-        width: 60vw;
+        width: 90vw;
     }
     .button{
         width: 40%;
         height: auto;
     }
     .forms{
-        width: 60vw;
+        width: 90vw;
     }
     #about{
         display: flex;
