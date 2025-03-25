@@ -178,3 +178,30 @@ ul {
     min-height: 20em;
     vertical-align: top;
 }
+
+@media (max-width:768px) {
+    .projects{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .project{
+        width: 60vw;
+    }
+    .button{
+        width: 20em;
+        height: auto;
+        font-size: 20px;
+    }
+    .forms{
+        width: 60vw;
+    }
+    #about{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .navbar{
+        
+    }
+}
