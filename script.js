@@ -13,3 +13,15 @@ btn_fake_news.addEventListener('click',()=>{
 btn_monitoring.addEventListener('click',()=>{
     location.href="project-monitoring.html";
 })
+
+document.getElementById('navbar-toggle').addEventListener('click', ()=>{
+    const menu = document.getElementById('navbar-menu');
+    if (menu.style.display === "none" || menu.style.display === "") {
+        menu.style.display = "flex"; 
+        console.log(menu);
+    } else {
+        menu.style.display = "none"; 
+        
+    }
+    console.log("Salve")
+});

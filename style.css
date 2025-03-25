@@ -28,30 +28,50 @@ section {
     background-color: #444444;
     overflow: hidden;
     text-align: center;
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1em;
 }
 
-.navbar ul {
-    display: inline-flex;
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar-menu {
+    display: flex;
     list-style-type: none;
+    margin: 0;
+    padding: 0; 
 }
 
-.navbar li {
-    margin-right: 5em;
+.navbar-menu li {
+    margin-right: 0 1em;
 }
 
-.navbar li a {
+.navbar-menu li a {
     display: block;
     text-decoration: none;
     text-align: center;
     padding: 2em 16px;
 }
 
-.navbar li a:hover {
+.navbar-menu li a:hover {
     background-color: #242424;
+}
+
+.navbar-toggle{
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
 }
 
 #about {
@@ -119,7 +139,7 @@ ul {
     width: 100vw;
 }
 
-.sections p{
+.sections p {
     margin: 10px;
 }
 
@@ -143,7 +163,7 @@ ul {
     border-radius: 15px;
 }
 
-.project p{
+.project p {
     margin-bottom: 10px;
 }
 
@@ -151,7 +171,7 @@ ul {
     flex-direction: row;
 }
 
-.button{
+.button {
     background-color: #848484;
     padding: 10px;
     border: none;
@@ -159,7 +179,7 @@ ul {
     font-size: 15px;
 }
 
-.forms{
+.forms {
     padding: 15px;
     background-color: #444444;
     border-radius: 15px;
@@ -169,53 +189,78 @@ ul {
     flex-direction: column;
 }
 
-.forms input, textarea{
+.forms input,
+textarea {
     width: 100%;
     color: black;
     border: 1px solid #999;
     border-radius: 5px;
 }
 
-.forms div{
+.forms div {
     margin-bottom: 10px;
 }
 
-.forms textarea{
+.forms textarea {
     min-height: 20em;
     vertical-align: top;
 }
 
 @media (max-width:768px) {
-    .projects{
+    .projects {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
-    .project{
+
+    .project {
         width: 90vw;
     }
-    .button{
+
+    .button {
         width: 40%;
         height: auto;
     }
-    .forms{
+
+    .forms {
         width: 90vw;
     }
-    #about{
+
+    #about {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         width: 100vw;
     }
-    .image{
+
+    .image {
         width: 100vw;
         justify-content: center;
         margin: 0;
     }
-    .text{
+
+    .text {
         width: 100vw;
     }
-    .navbar{
-        
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 5em;
+        left: 0;
+        width: 100%;
+        background-color: #444444;
+        z-index: 9998;
+    }
+
+    .navbar-menu li{
+        margin: 0;
+        text-align: center;
+        padding: 1em 0;
+    }
+
+    .navbar-toggle{
+        display: block;
     }
 }
