@@ -137,6 +137,44 @@ ul {
     border-radius: 15px;
 }
 
+.project p{
+    margin-bottom: 10px;
+}
+
 .icons {
     flex-direction: row;
+}
+
+.button{
+    background-color: #848484;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    font-size: 15px;
+}
+
+.forms{
+    padding: 15px;
+    background-color: #444444;
+    border-radius: 15px;
+    width: 50vw;
+    min-height: 30em;
+    display: flex;
+    flex-direction: column;
+}
+
+.forms input, textarea{
+    width: 100%;
+    color: black;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+.forms div{
+    margin-bottom: 10px;
+}
+
+.forms textarea{
+    min-height: 20em;
+    vertical-align: top;
 }
