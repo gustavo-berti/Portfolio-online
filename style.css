@@ -89,10 +89,12 @@ ul {
 
 .image {
     margin-left: 2vw;
-    width: 45vw;
+    width: 60vw;
     display: grid;
     grid-template-rows: auto auto;
-    margin-left: 15vw;
+    margin-right: 25vw;
+    justify-content: center;
+    margin: 0;
 }
 
 .perfil {
@@ -115,6 +117,10 @@ ul {
     justify-content: center;
     align-items: center;
     width: 100vw;
+}
+
+.sections p{
+    margin: 10px;
 }
 
 .projects {
@@ -177,4 +183,39 @@ ul {
 .forms textarea{
     min-height: 20em;
     vertical-align: top;
+}
+
+@media (max-width:768px) {
+    .projects{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .project{
+        width: 60vw;
+    }
+    .button{
+        width: 40%;
+        height: auto;
+    }
+    .forms{
+        width: 60vw;
+    }
+    #about{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100vw;
+    }
+    .image{
+        width: 100vw;
+        justify-content: center;
+        margin: 0;
+    }
+    .text{
+        width: 100vw;
+    }
+    .navbar{
+        
+    }
 }
