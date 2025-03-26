@@ -87,13 +87,13 @@ section {
     color: var(--color);
 }
 
-.text {
+.about-text {
     margin: 10px;
     padding: 10px;
     width: 45vw;
 }
 
-.text p,
+.about-text p,
 ul {
     margin-bottom: 2em;
 }
@@ -110,8 +110,6 @@ ul {
 }
 
 .image {
-    margin-left: 2vw;
-    width: 60vw;
     display: grid;
     grid-template-rows: auto auto;
     margin-right: 25vw;
@@ -124,6 +122,7 @@ ul {
     height: 300px;
     border-radius: 50%;
     margin-bottom: 20px;
+    justify-self: center;
 }
 
 .social {
@@ -148,7 +147,7 @@ ul {
 .projects {
     margin-top: 20px;
     display: grid;
-    grid-template-columns: 20vw 20vw 20vw;
+    grid-template-columns: 20vw 20vw;
     gap: 20px;
 }
 
@@ -179,6 +178,7 @@ ul {
     border: none;
     border-radius: 15px;
     font-size: 15px;
+    cursor: pointer;
 }
 
 .forms {
@@ -213,11 +213,34 @@ textarea {
     margin: 0;
     background-color:var(--bg-color-navbar);
     border: none;
+    cursor: pointer;
 }
 
 #toggle-button img{
     height: 30px;
     width: auto;
+}
+
+.text{
+    margin-left: 10px;
+    margin-inline-start: 10px;
+}
+
+.photo{
+    width: 25vw;
+    padding: 5px;
+}
+
+.image-project{
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+}
+
+.grid-2column{
+    display: grid;
+    grid-template-columns: 45vw 45vw;
+    grid-gap: 5vw;
 }
 
 @media (max-width:768px) {
@@ -248,7 +271,7 @@ textarea {
     }
 
     .image {
-        width: 100vw;
+        width: 100%;
         justify-content: center;
         margin: 0;
     }
