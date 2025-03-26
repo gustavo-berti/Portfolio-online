@@ -2,6 +2,9 @@ let btn_git = document.getElementById('git');
 let btn_fake_news = document.getElementById('fake-news');
 let btn_monitoring = document.getElementById('monitoring');
 
+let toggle_button = document.getElementById('toggle-button');
+let toggle_icon = document.getElementById('toggle-icon');
+
 let github = document.getElementById('github');
 let instagram = document.getElementById('instagram');
 let linkedin = document.getElementById('linkedin');
@@ -41,3 +44,16 @@ document.getElementById('navbar-toggle').addEventListener('click', ()=>{
     }
     console.log("Salve")
 });
+
+function toggleMode(){
+    let body = document.querySelector('body');
+    let theme = body.getAttribute('data-theme');
+
+    if(theme === 'light'){
+        body.setAttribute('data-theme', '');
+        toggle_icon.src = "assets/sun.png"
+    } else {
+        body.setAttribute('data-theme', 'light');
+        toggle_icon.src = "assets/moon.png"
+    }
+}
