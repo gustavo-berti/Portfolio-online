@@ -7,18 +7,26 @@
     <title>Projeto</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    <script src='script.js'></script>
+    <script src='script.js' defer></script>
 </head>
 
 <body>
     <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Inicial</a></li>
-            <li><a href="index.html#projects">Projetos</a></li>
-            <li><a href="index.html#skills">Habilidades</a></li>
-            <li><a href="index.html#academic-experience">Experiência Acadêmica</a></li>
-            <li><a href="index.html#contact">Contato</a></li>
-        </ul>
+        <div class="navbar-container">
+            <button class="navbar-toggle" id="navbar-toggle">
+                ☰
+            </button>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><a href="index.html#about">Inicial</a></li>
+                <li><a href="index.html#projects">Projetos</a></li>
+                <li><a href="index.html#skills">Habilidades</a></li>
+                <li><a href="index.html#academic-experience">Experiência Acadêmica</a></li>
+                <li><a href="index.html#contact">Contato</a></li>
+            </ul>
+        </div>
+        <div class="toggle-mode">
+            <button id="toggle-button" onclick="toggleMode()"><img src="assets/sun.png" id="toggle-icon"></button>
+        </div>
     </nav>
     <main>
         <section class="section">

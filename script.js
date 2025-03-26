@@ -1,7 +1,3 @@
-let btn_git = document.getElementById('git');
-let btn_fake_news = document.getElementById('fake-news');
-let btn_monitoring = document.getElementById('monitoring');
-
 let toggle_button = document.getElementById('toggle-button');
 let toggle_icon = document.getElementById('toggle-icon');
 
@@ -9,47 +5,56 @@ let github = document.getElementById('github');
 let instagram = document.getElementById('instagram');
 let linkedin = document.getElementById('linkedin');
 
-github.addEventListener('click', ()=>{
-    location.href="https://github.com/gustavo-berti";
-});
+function goToGit() {
+    location.href = "project-git.html";
+};
 
-instagram.addEventListener('click', ()=>{
-    location.href="https://www.instagram.com/gustavo_gberti/";
-});
+function goToFakeNews() {
+    location.href = "project-fake-news.html";
+};
 
-linkedin.addEventListener('click', ()=>{
-    location.href="https://www.linkedin.com/in/gustavo-gimenez-berti-70797a250/";
-});
+function goToMonitoring() {
+    location.href = "project-monitoring.html";
+};
 
-btn_git.addEventListener('click',()=>{
-    location.href="project-git.html";
-});
+try {
+    instagram.addEventListener('click', () => {
+        location.href = "https://www.instagram.com/gustavo_gberti/";
+    });
+} catch (error) { }
 
-btn_fake_news.addEventListener('click',()=>{
-    location.href="project-fake-news.html";
-});
+try {
 
-btn_monitoring.addEventListener('click',()=>{
-    location.href="project-monitoring.html";
-});
+    linkedin.addEventListener('click', () => {
+        location.href = "https://www.linkedin.com/in/gustavo-gimenez-berti-70797a250/";
+    });
+} catch (error) { }
 
-document.getElementById('navbar-toggle').addEventListener('click', ()=>{
+try {
+
+    btn_git.addEventListener('click', () => {
+        location.href = "https://github.com/gustavo-berti";
+    });
+} catch (error) { }
+
+
+document.getElementById('navbar-toggle').addEventListener('click', () => {
     const menu = document.getElementById('navbar-menu');
     if (menu.style.display === "none" || menu.style.display === "") {
-        menu.style.display = "flex"; 
+        menu.style.display = "flex";
         console.log(menu);
     } else {
-        menu.style.display = "none"; 
-        
+        menu.style.display = "none";
+
     }
     console.log("Salve")
 });
 
-function toggleMode(){
+function toggleMode() {
     let body = document.querySelector('body');
     let theme = body.getAttribute('data-theme');
 
-    if(theme === 'light'){
+    if (theme === 'light') {
         body.setAttribute('data-theme', '');
         toggle_icon.src = "assets/sun.png"
     } else {
