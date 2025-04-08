@@ -285,7 +285,10 @@ textarea {
     cursor: pointer;
 }
 
-@media (max-width:768px) {
+@media (max-width:480px) {
+    .about-text{
+        width: 100%;
+    }
     .projects {
         display: flex;
         flex-wrap: wrap;
@@ -350,5 +353,14 @@ textarea {
 
     .navbar-toggle{
         display: block;
+    }
+
+    .grid-modal{
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+
+    .image-project img{
+        width: 100%;
     }
 }
