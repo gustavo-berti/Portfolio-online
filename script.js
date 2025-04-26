@@ -1,10 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
     const theme = localStorage.getItem('theme');
+    const lang = localStorage.getItem('lang');
     document.body.setAttribute("data-theme", theme);
+    document.body.setAttribute("lang", lang);
+    currentLang = lang;
+    loadLang(lang);
     toggleMode();
 });
 
 let modal;
+let currentLang;
 
 let toggle_button = document.getElementById('toggle-button');
 let toggle_icon = document.getElementById('toggle-icon');
@@ -38,12 +43,10 @@ document.getElementById('navbar-toggle').addEventListener('click', () => {
     const menu = document.getElementById('navbar-menu');
     if (menu.style.display === "none" || menu.style.display === "") {
         menu.style.display = "flex";
-        console.log(menu);
     } else {
         menu.style.display = "none";
 
     }
-    console.log("Salve")
 });
 
 function toggleMode() {
@@ -61,9 +64,9 @@ function toggleMode() {
 }
 
 async function showModal(element) {
-    console.log(element);
     modal = document.getElementById(element);
     modal.classList.remove('hidden');
+    document.body.classList.add('no-scroll');
     modal.addEventListener("click", (e) => {
         if (e.target === modal)
             closeModal();
@@ -72,4 +75,34 @@ async function showModal(element) {
 
 function closeModal() {
     modal.classList.add('hidden');
+    document.body.classList.remove('no-scroll');
+}
+
+function changeLang() {
+    currentLang = currentLang === "pt" ? "en" : "pt";
+    console.log(currentLang);
+    
+    localStorage.setItem("lang", currentLang);
+    loadLang(currentLang);
+}
+
+function loadLang(lang) {
+    fetch(`json/${lang}.json`).then(data => data.json().then(data => translatePage(data)));
+}
+
+function translatePage(lang) {
+    document.querySelectorAll('[data-i18n]').forEach(e => {
+        let item = e.getAttribute('data-i18n');
+        e.textContent = lang[item];
+    })
+    document.querySelectorAll('[data-i18n-nav] li').forEach(e => {
+        e.children[0].textContent = lang.navbar[e.id];
+    })
+    document.querySelectorAll('[data-i18n-ul] li').forEach(e => {
+        e.textContent = lang["itens-text"][e.id];
+    })
+    document.querySelectorAll('[data-i18n-alt]').forEach(e => {
+        let item = e.getAttribute('data-i18n-alt');
+        e.setAttribute("alt", lang[item]);
+    })
 }

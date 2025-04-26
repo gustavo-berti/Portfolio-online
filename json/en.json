@@ -1,0 +1,36 @@
+{
+    "navbar": {
+        "home": "Home",
+        "project": "Project",
+        "skills": "Skills",
+        "academic-experience": "Academic Experience",
+        "contact": "Contact"
+    },
+    "itens-text": {
+        "p1": "Currently studying Software Engineering 3/4",
+        "p2": "Studying ReactJS and Java"
+    },
+    "about-title": "About me",
+    "about-text": "I'm 20 years old, I live in Alto Paraná/PR and I got into the world of programming because of my dream of creating my own games. I was amazed by the infinite paths that programming opens up. Currently, I'm trying to learn even more about software development and programming.",
+    "project-title": "Projects",
+    "project-text-git": "Mini-course Project on Code Versioning Management with Git and Github.",
+    "see-more-button": "See More",
+    "project-text-gehlen": "Extension project in partnership with the Maurício Gehlen Institute, presenting what Fake News is.",
+    "skill-title": "🛠 Skills",
+    "skill-text": "Some technologies and tools that I use and have basic knowledge of.",
+    "experience-title": "Academic Experience",
+    "experience-text1": "Bachelor of Software Engineering, 2023-Current",
+    "experience-text2": "High school integrated with a technical course in computer science, 2019-2022",
+    "contact-title": "Contact",
+    "label-name": "Name:",
+    "label-text": "Text:",
+    "submit-button": "Submit",
+    "git-title": "Git and Github mini-course",
+    "git-text1": "This was a PAIPE project (Program to Support the Implementation of Teaching Projects) carried out at the Federal Institute of Paraná - Paranavaí Campus with the objective of training students at the Institute in the use of Git for version control, structured collaboration in academic projects and the application of software development methodologies.",
+    "git-text2": "The mini-course took place in biweekly meetings of three hours each, where Git concepts were applied in a practical way. There were a total of 4 meetings where students were taught how to create repositories, manage branches, perform merges and resolve conflicts.",
+    "git-text3": "At the end of everything, feedback was collected from students, which allowed the creation of an inventory of best practices, in addition to identifying areas for improvement. The results were also used to improve future editions of the project and contribute to a continuous cycle of improvement.",
+    "fake-news-title": "Extension Project - Fake News",
+    "fake-news-text1": "This was an extension project carried out at the Maurício Gehlen Institute with the aim of teaching the elderly about fake news in a practical way. The project's main objectives were to teach the elderly how to identify and avoid fake news, promote digital and information literacy, encourage the exchange of experiences between students and the elderly, and encourage critical reflection on the consumption of information on the internet.",
+    "fake-news-text2": "Teaching materials, presentations and interactive activities were developed, including lectures on the concept and impacts of fake news, tips for identifying false news, practical examples and critical analysis exercises. The activity was held on October 15th and 17th.",
+    "fake-news-text3": "The project demonstrated the importance of digital education for senior citizens, promoting critical thinking and contributing to a safer digital environment. The interactions and testimonies of participants highlighted the positive impact of the initiative, reinforcing the need to expand similar actions."
+}

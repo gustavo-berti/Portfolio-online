@@ -17,6 +17,7 @@ html {
 
 body {
     background-color: var(--bg-color-body);
+    transition: background-color 0.5s ease;
 }
 
 section {
@@ -32,7 +33,7 @@ section {
     text-align: center;
     position: sticky;
     top: 0;
-    z-index: 9999;
+    z-index: 999;
     display: flex;
     justify-content: right;
     align-items: center;
@@ -75,6 +76,12 @@ section {
     color: var(--color);
     font-size: 2em;
     cursor: pointer;
+}
+
+.toggle-mode{
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
 }
 
 #about {
@@ -177,10 +184,16 @@ ul {
 .button {
     background-color: var(--bg-color-button);
     padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     border: none;
     border-radius: 15px;
     font-size: 15px;
     cursor: pointer;
+}
+
+.button:hover{
+    background-color: var(--bg-color-body);
 }
 
 .forms {
@@ -250,6 +263,10 @@ textarea {
     display: none !important;
 }
 
+.no-scroll{
+    overflow: hidden;
+}
+
 .modal {
     width: 100%;
     height: 100%;
@@ -261,15 +278,15 @@ textarea {
     justify-content: center;
     left: 0;
     top: 0;
+    z-index: 1000;
 }
 
 .modal-content {
-    margin-top: 5em;
     border: 1px solid black;
     border-radius: 10px;
     background-color: var(--bg-color-button);
     box-shadow: 0 0 20px black;
-    padding: 10px;
+    padding: 20px;
     text-align: left;
     max-width: 80vw;
     max-height: 80vh;
@@ -280,7 +297,7 @@ textarea {
     position: absolute;
     top: 10px;
     right: 15px;
-    font-size: 28px;
+    font-size: 40px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -299,8 +316,11 @@ textarea {
         width: 90vw;
     }
 
-    .button {
+    .project button{
         width: 40%;
+    }
+
+    .button {
         height: auto;
     }
 
@@ -341,7 +361,7 @@ textarea {
         left: 0;
         width: 100%;
         height: auto;
-        z-index: 9999 !important;
+        z-index: 999 !important;
     }
 
     .navbar-menu li{

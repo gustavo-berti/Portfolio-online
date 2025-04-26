@@ -16,15 +16,16 @@
             <button class="navbar-toggle" id="navbar-toggle">
                 ☰
             </button>
-            <ul class="navbar-menu" id="navbar-menu">
-                <li><a href="#about">Inicial</a></li>
-                <li><a href="#projects">Projetos</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#academic-experience">Experiência Acadêmica</a></li>
-                <li><a href="#contact">Contato</a></li>
+            <ul class="navbar-menu" id="navbar-menu" data-i18n-nav="navbar">
+                <li id="home"><a href="#about">Inicial</a></li>
+                <li id="project"><a href="#projects">Projetos</a></li>
+                <li id="skills"><a href="#skills">Habilidades</a></li>
+                <li id="academic-experience"><a href="#academic-experience">Experiência Acadêmica</a></li>
+                <li id="contact"><a href="#contact">Contato</a></li>
             </ul>
         </div>
         <div class="toggle-mode">
+            <button id="lang-button" class="button" onclick="changeLang()">PT/EN</button>
             <button id="toggle-button" onclick="toggleMode()"><img src="assets/sun.png" id="toggle-icon"></button>
         </div>
     </nav>
@@ -40,12 +41,12 @@
             </div>
             <div class="about-text">
                 <h1 class="title">Gustavo Gimenez Berti</h1>
-                <ul class="itens-text">
-                    <li>Atualmente cursando Engenharia de Software 3/4</li>
-                    <li>Estudando ReactJs e Java</li>
+                <ul class="itens-text" data-i18n-ul="itens-text">
+                    <li id="p1">Atualmente cursando Engenharia de Software 3/4</li>
+                    <li id="p2">Estudando ReactJS e Java</li>
                 </ul>
-                <h2 class="title">Sobre mim</h2>
-                <p>Tenho 20 anos, moro em Alto Paraná/PR e entrei no mundo da programação pelo sonho de criar meus
+                <h2 class="title" data-i18n="about-title">Sobre mim</h2>
+                <p data-i18n="about-text">Tenho 20 anos, moro em Alto Paraná/PR e entrei no mundo da programação pelo sonho de criar meus
                     próprios
                     jogos. Fiquei maravilhado com os infinitos caminhos que a programação abre. Atualmente, estou
                     tentando
@@ -54,24 +55,24 @@
         </section>
         <section class="sections" id="projects">
             <div>
-                <h2>Projetos</h2>
+                <h2 data-i18n="project-title">Projetos</h2>
             </div>
             <div class="projects">
                 <div class="project">
                     <img src="assets/github-original.jpeg" alt="Git Hub">
-                    <p>Projeto de Minicurso Gerenciamento de Versionamento de Codigo com Git e Github</p>
-                    <button class="button" onclick="showModal('git')">Ver mais</button>
+                    <p data-i18n="project-text-git">Projeto de Minicurso Gerenciamento de Versionamento de Codigo com Git e Github</p>
+                    <button class="button" onclick="showModal('git')" data-i18n="see-more-button">Ver mais</button>
                 </div>
                 <div class="project">
                     <img src="assets/mauricio-gehlen.jpeg" alt="Maurício Gehlen">
-                    <p>Projeto de extensão em parceria com o Instituto Maurício Gehlen, apresentando o que é Fake News
+                    <p data-i18n="project-text-gehlen">Projeto de extensão em parceria com o Instituto Maurício Gehlen, apresentando o que é Fake News
                     </p>
-                    <button class="button" onclick="showModal('fake-news')">Ver mais</button>
+                    <button class="button" onclick="showModal('fake-news')" data-i18n="see-more-button">Ver mais</button>
                 </div>
             </div>
         </section>
         <section class="sections" id="skills">
-            <h2 class="title">🛠 Habilidades</h2>
+            <h2 class="title" data-i18n="skill-title">🛠 Habilidades</h2>
             <div class="icons">
                 <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
                     alt="Visual Studio Code" />
@@ -84,19 +85,19 @@
                 <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-plain.svg" alt="Java"/>
                 <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"/>
             </div>
-            <p>Algumas tecnologias e ferramentas que uso e tenho conhecimento básico.</p>
+            <p data-i18n="skill-text">Algumas tecnologias e ferramentas que uso e tenho conhecimento básico.</p>
         </section>
         <section class="sections" id="academic-experience">
-            <h2>Experiência Academica</h2>
-            <p>Bacharelado em Engenharia de Software, 2023-Atual</p>
-            <p>Ensino Médio integrado a curso técnico em informática, 2019-2022</p>
+            <h2 data-i18n="experience-title">Experiência Academica</h2>
+            <p data-i18n="experience-text1">Bacharelado em Engenharia de Software, 2023-Atual</p>
+            <p data-i18n="experience-text2">Ensino Médio integrado a curso técnico em informática, 2019-2022</p>
         </section>
         <section class="sections" id="contact">
-            <h2>Contato</h2>
+            <h2 data-i18n="contact-title">Contato</h2>
             <div class="forms">
                 <form action="" method="post">
                     <div>
-                        <label for="name">Nome:</label> <br>
+                        <label for="name" data-i18n="label-name">Nome:</label> <br>
                         <input type="text" name="name" required>
                     </div>
                     <div>
@@ -104,12 +105,12 @@
                         <input type="text" name="email" required>
                     </div>
                     <div>
-                        <label for="message">Texto:</label> <br>
+                        <label for="message" data-i18n="label-text">Texto:</label> <br>
                         <textarea name="message" required></textarea>
                     </div>
                     <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                     <div>
-                        <button type="submit" class="button">Enviar</button>
+                        <button type="submit" class="button" data-i18n="submit-button">Enviar</button>
                     </div>
                 </form>
             </div>
@@ -123,19 +124,19 @@
                     <img src="assets/git.jpg" class="photo">
                 </div>
                 <div class="text">
-                    <h1>Minicurso Git e Github</h1>
-                    <p>
+                    <h1 data-i18n="git-title">Minicurso Git e Github</h1>
+                    <p data-i18n="git-text1">
                         Este foi um projeto PAIPE (Programa de Apoio à Implementação de Projetos de Ensino) realizado no
                         Instituto Federal do Paraná - Campus Paranavaí com o objetivo de capacitar estudantes do
                         Instituto no uso do Git para controle de versões, colaboração estruturada em projetos acadêmicos
                         e aplicação de metodologias de desenvolvimento de software.
                     </p>
-                    <p>
+                    <p data-i18n="git-text2">
                         O minicurso aconteceu com encontros quinzenais de três horas cada, onde os conceitos do Git
                         foram aplicados de forma pratica. Houve um total de 4 encontros onde foi ensinado sobre criar
                         repositórios, gerenciar branches, realizar merges e resolver conflitos.
                     </p>
-                    <p>
+                    <p data-i18n="git-text3">
                         No fim de tudo houve uma coleta de feedbacks dos estudantes que permitiu a criação de um
                         inventário de melhores práticas, além de identificar áreas para melhorias. Os resultados também
                         foram utilizados para aprimorar futuras edições do projeto e contribuir para um ciclo contínuo
@@ -154,21 +155,21 @@
                     <img src="assets/fakenew.jpg" class="photo">
                 </div>
                 <div class="text">
-                    <h1>Projeto de Extensão - Fake News</h1>
-                    <p>
+                    <h1 data-i18n="fake-news-title">Projeto de Extensão - Fake News</h1>
+                    <p data-i18n="fake-news-text1">
                         Este foi um projeto de extensão realizado no Instituto Maurício Gehlen com o objetivo de ensinar
                         sobre fake news de forma prática para os idosos. O projeto teve como principais objetivos
                         ensinar os idosos a identificar e evitar fake news, promover o letramento digital e
                         informacional, estimular a troca de experiências entre estudantes e idosos e fomentar a reflexão
                         crítica sobre o consumo de informações na internet.
                     </p>
-                    <p>
+                    <p data-i18n="fake-news-text2">
                         Foram desenvolvidos materiais didáticos, apresentações expositivas e atividades interativas,
                         incluindo palestras sobre o conceito e impactos das fake news, dicas para identificar notícias
                         falsas, exemplos práticos e exercícios de análise crítica. A atividade foi realizada nos dias 15
                         e 17 de outubro.
                     </p>
-                    <p>
+                    <p data-i18n="fake-news-text3">
                         O projeto demonstrou a importância da educação digital para a terceira idade, promovendo o
                         pensamento crítico e contribuindo para um ambiente digital mais seguro. As interações e
                         depoimentos dos participantes evidenciaram o impacto positivo da iniciativa, reforçando a
