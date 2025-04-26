@@ -302,6 +302,18 @@ textarea {
     cursor: pointer;
 }
 
+#repos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.repo{
+    width: 20vw;
+}
+
 @media (max-width:480px) {
     .about-text{
         width: 100%;

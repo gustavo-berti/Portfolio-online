@@ -6,6 +6,28 @@ document.addEventListener("DOMContentLoaded", () => {
     currentLang = lang;
     loadLang(lang);
     toggleMode();
+
+    
+    fetch('https://api.github.com/users/gustavo-berti/repos').then(async res => {
+        if (!res.ok) {
+            throw new Error(res.status);
+        }
+        let data = await res.json();
+        for (let i = 0; i < data.length; i++) {
+            if (data[i].fork) continue;
+            if (data[i].created_at < "2024-12-31T00:00:00Z") continue;
+            let div = document.createElement('div');
+            div.innerHTML = `
+                <h4>${data[i].name}</h4>
+                <p>${data[i].description}</p>
+                <button class="button"><a style="text-decoration: none;" href="${data[i].html_url}" target="_blank" class="btn">Ver repositório</a></button>
+            `;
+            div.classList.add('project');
+            div.classList.add('repo');
+            document.getElementById('repos').appendChild(div);
+        }
+    });
+
 });
 
 let modal;
