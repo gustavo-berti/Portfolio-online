@@ -2,7 +2,8 @@
     "navbar":{
         "home":"Inicio",
         "project":"Projeto",
-        "skills":"Habilidades",
+        "skill":"Habilidades",
+        "repository":"Repositórios",
         "academic-experience":"Experiência Acadêmica",
         "contact":"Contato"
     },

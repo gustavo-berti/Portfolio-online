@@ -2,7 +2,8 @@
     "navbar": {
         "home": "Home",
         "project": "Project",
-        "skills": "Skills",
+        "skill": "Skills",
+        "repository": "Repositories",
         "academic-experience": "Academic Experience",
         "contact": "Contact"
     },
